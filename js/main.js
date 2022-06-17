@@ -30,6 +30,10 @@ ac.addEventListener('click', () =>{
     screen.textContent=""
 })
 
+erase.addEventListener('click', () =>{
+    screen.textContent--
+})
+
 register(one)
 register(two)
 register(three)

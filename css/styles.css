@@ -2,11 +2,12 @@
     --secondary-color: #F16E3D;
     --background: #ffb178;
     --background-2:#f5a66b;
+    --main-font-color: #9d9b9c;
 }
 
 *{
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: Verdana, sans-serif;
 }
 
 body{
@@ -18,11 +19,6 @@ h1{
     display: none;
 }
 
-.background-drawing{
-    width: 50%;
-    height: 50%;
-    background-color: var(--background-2);
-}
 
 .calculator{
     display: flex;
@@ -30,24 +26,53 @@ h1{
     flex-direction: column;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 5em;
+    margin-top: 3em;
     width: 250px;
     height: 500px;
     border-radius: 1em;
     background-color: white;
     overflow: hidden;
+    box-shadow: 0px 0px 18px 6px #F78E42;
+}
+
+@media screen and (min-width:1024px) {
+    .calculator{
+        margin-top: 1em;
+        width: 300px;
+        height: 550px;
+    }
 }
 
 .screen{
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-end;
+    flex-direction: column;
     height: 30%;
 }
 
+.screen__content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 5px;
+    right: .5em;
+}
+
 .screen__text{
-    margin-right: .4em;
-    font-size: 2rem;
+    font-size: 3rem;
+}
+
+.screen__text-record{
+    color: var(--main-font-color);
+    font-weight: 600;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 6em;
 }
 
 .keyboard{
@@ -59,23 +84,48 @@ h1{
     grid-template-rows: 5;    
 }
 
+.special-btn{
+    width: 10px;
+    height: 13px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    filter: invert(67%) sepia(0%) saturate(20%) hue-rotate(50deg) brightness(93%) contrast(93%);
+
+}
+
+.special-btn--delete{
+    width: 20px;
+    height: 23px;
+    position: relative;
+    top: 2px;
+}
+
+.special-btn--minus{
+    height: 26px;
+    width: 13px;
+    top: 2px;
+}
+
 .keyboard__button{
-    font-size: 1.2rem;
-    color: gray;
+    font-size: 1rem;
+    color: #9d9b9c;
     border: 0;
     cursor: pointer;
-    width: 40px;
+    width: 50px;
     height: 40px;
-    border: 1px solid lightgray;
-    border-radius: .2em;
+    border: 1px solid none;
+    border-radius: .5em;
     margin-right: auto;
     margin-left: auto;
-    box-shadow: 1px 1px 15px 6px lightgray;
+    box-shadow: 0px 2px 5px 0px rgba(179,169,169,0.89);
 }
 
 .keyboard__button:hover{
     color: var(--secondary-color);
 }
+
+/*este es el grid que posiciona los todos los botones*/
 
 .keyboard__button--AC{
     grid-column: 1 / 2;
