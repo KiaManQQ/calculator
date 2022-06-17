@@ -13,12 +13,23 @@
 body{
     margin: 0;
     background-color: var(--background);
+    position: relative;
+    background-image: url('/assets/icons/drawing-1.svg');
+    background-repeat: no-repeat ;
 }
 
 h1{
     display: none;
 }
 
+
+.background-drawing{
+}
+
+.background-drawing__image{
+    height: 99.9vh;
+    width: 100%;
+}
 
 .calculator{
     display: flex;
@@ -125,7 +136,7 @@ h1{
     color: var(--secondary-color);
 }
 
-/*este es el grid que posiciona los todos los botones*/
+/*this grid positionates the all the buttons (including special buttons)*/
 
 .keyboard__button--AC{
     grid-column: 1 / 2;

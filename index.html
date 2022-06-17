@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <div class="background-drawing"></div>
+    <!-- <div class="background-drawing">
+        <img src="assets/icons/drawing-1.svg" alt="" class="background-drawing__image">
+    </div> -->
     <header>
         <h1>Calculadora</h1>
     </header>
@@ -17,34 +19,35 @@
         <div class="calculator">
             <div class="screen">
                 <div class="screen__content">
-                    <span class="screen__text" id="screen">buenas</span>
-                    <span class="screen__text-record">hola</span>
+                    <span class="screen__text" id="screen">12345</span>
+                    <span class="screen__text-record">1234</span>
                 </div>
         </div>
             <div class="keyboard">
+                <!-- special buttons are buttons that are represented with images instead of plain text -->
                 <button class="keyboard__button keyboard__button--AC" id="AC">AC</button>
                 <button class="keyboard__button keyboard__button--delete" id="delete">
                     <img src="assets/icons/icons8-clear-symbol-50.png" alt="" class="special-btn special-btn--delete"></button>
+                    <button class="keyboard__button  keyboard__button--plus" id="plus"><img src="assets/icons/plus.svg" alt="" class="special-btn special-btn--plus"></button>
+                    <button class="keyboard__button  keyboard__button--minus" id="minus">
+                        <img src="assets/icons/minus-3108.svg" alt="" class="special-btn special-btn--minus">
+                    </button>
+                    <button class="keyboard__button  keyboard__button--for" id="for">
+                        <img src="assets/icons/multiplication-sign-svgrepo-com.svg" alt="multiplication-sign" class="special-btn special-btn--multiplication"></button>
+                        <button class="keyboard__button  keyboard__button--bet" id="bet">
+                            <img src="assets/icons/math-division.svg" alt="" class="special-btn special-btn--division"></button>
                 <button class="keyboard__button keyboard__button--1" id="1">1</button>
                 <button class="keyboard__button  keyboard__button--2" id="2">2</button>
                 <button class="keyboard__button  keyboard__button--3" id="3">3</button>
-                <button class="keyboard__button  keyboard__button--plus" id="plus"><img src="assets/icons/plus.svg" alt="" class="special-btn special-btn--plus"></button>
                 <button class="keyboard__button  keyboard__button--4" id="4">4</button>
                 <button class="keyboard__button  keyboard__button--5" id="5">5</button>
                 <button class="keyboard__button  keyboard__button--6" id="6">6</button>
-                <button class="keyboard__button  keyboard__button--minus" id="minus">
-                    <img src="assets/icons/minus-3108.svg" alt="" class="special-btn special-btn--minus">
-                </button>
                 <button class="keyboard__button  keyboard__button--7" id="7">7</button>
                 <button class="keyboard__button  keyboard__button--8" id="8">8</button>
                 <button class="keyboard__button  keyboard__button--9" id="9">9</button>
-                <button class="keyboard__button  keyboard__button--for" id="for">
-                    <img src="assets/icons/multiplication-sign-svgrepo-com.svg" alt="multiplication-sign" class="special-btn special-btn--multiplication"></button>
                 <button class="keyboard__button  keyboard__button--0" id="0">0</button>
                 <button class="keyboard__button  keyboard__button--dot" id="dot">.</button>
                 <button class="keyboard__button  keyboard__button--per" id="per">%</button>
-                <button class="keyboard__button  keyboard__button--bet" id="bet">
-                    <img src="assets/icons/math-division.svg" alt="" class="special-btn special-btn--division"></button>
                 <button class="keyboard__button  keyboard__button--equal" id="equal">=</button>
         </div>
     </main>
