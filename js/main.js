@@ -19,10 +19,10 @@ changeTheme.addEventListener('click', ()=>{
 
 // calculator
 
-let keyboardNum = document.querySelectorAll('.keyboard-button');
-let screen = document.getElementById('screen');
+// let keyboardNum = document.querySelectorAll('.keyboard-button');
+// let screen = document.getElementById('screen');
 
-keyboardNum.addEventListener('click', () =>{
-    console.log(`${keyboardNum}`)
-})
+// keyboardNum.addEventListener('click', () =>{
+//     console.log(`${keyboardNum}`)
+// })
 
