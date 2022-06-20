@@ -7,6 +7,7 @@
     --css-troll: invert(67%) sepia(0%) saturate(20%) hue-rotate(50deg) brightness(93%) contrast(93%);
     --transition:color 0.1s, background-color 0.1s ease-in-out;
     --css-troll-2: var(--main-font-color);
+    --btn-box-shadow: 0px 2px 5px 0px rgba(179,169,169,0.89);
 }
 
 *{
@@ -23,17 +24,19 @@ body{
 }
 
 body.dark{
-    --background: #000000;
-    --calculator-color: #243441;
+    --background: #212F3C;
+    --calculator-color: #1B2631;
     --main-font-color: #fff;
     --secondary-font-color: #fff;
     --css-troll:  invert(51%) sepia(62%) saturate(2253%) hue-rotate(338deg) brightness(102%) contrast(89%);
     --css-troll-2: #F16E3D;
+    --btn-box-shadow: 0px 2px 3px -1px #000000;;
 }
 
 h1{
     display: none;
 }
+
 
 .change-theme-container{
     position: relative;
@@ -85,7 +88,7 @@ h1{
     /* box-shadow: 0px 0px 18px 6px #F78E42; */
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width:720px) {
     .calculator{
         width: 270px;
         height: 550px;
@@ -113,15 +116,16 @@ h1{
 }
 
 .screen__elements{
-    position: relative;
+    position: absolute;
     right: 10px;
 }
+
 
 .screen__elements--record{
     color: var(--main-font-color);
     font-weight: 600;
     font-size: 1.2rem;
-    top: 30px;
+    bottom: 25px;
 }
 
 .keyboard-container{
@@ -138,7 +142,7 @@ h1{
 .keyboard-button{
     color: var(--main-font-color);
     background-color: var(--calculator-color);
-    box-shadow: 0px 2px 5px 0px rgba(179,169,169,0.89);
+    box-shadow: var(--btn-box-shadow);
     cursor: pointer;
     width: 50px;
     height: 40px;
@@ -148,6 +152,17 @@ h1{
     margin-right: auto;
     margin-left: auto;
     font-size: 1rem;
+    position: relative;
+}
+
+.keyboard-button:hover{
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    --css-troll:  invert(51%) sepia(62%) saturate(2253%) hue-rotate(338deg) brightness(102%) contrast(89%);
+}
+
+.keyboard-button:active{
+    top: 1px;
 }
 
 .keyboard-button--ac{
@@ -173,12 +188,6 @@ h1{
     height: 20px;
 }
 
-
-.keyboard-button:hover{
-    color: var(--secondary-color);
-    border: 1px solid var(--secondary-color);
-    --css-troll:  invert(51%) sepia(62%) saturate(2253%) hue-rotate(338deg) brightness(102%) contrast(89%);
-}
 
 
 .keyboard-button--equal{

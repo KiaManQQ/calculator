@@ -18,11 +18,56 @@ changeTheme.addEventListener('click', ()=>{
 });
 
 // calculator
+const keyboardErase = document.getElementById('erase');
+const display = document.getElementById('screen');
+const displayRecord = document.getElementById('record');
+const eraseDisplay = document.getElementById('ac');
+const equal = document.getElementById('equal');
+const keyboardNumber = document.querySelectorAll('.keyboard-button--number');
+const keyboardSign = document.querySelectorAll('.keyboard-button--operand');
+let calculator = ''
+let otherCalculator=''
 
-// let keyboardNum = document.querySelectorAll('.keyboard-button');
-// let screen = document.getElementById('screen');
 
-// keyboardNum.addEventListener('click', () =>{
-//     console.log(`${keyboardNum}`)
-// })
+function updateDisplay(){
+    display.textContent=calculator
+    displayRecord.textContent= otherCalculator
+};
+function clearDisplay(){
+    calculator = ''
+}
 
+keyboardSign.forEach(button =>{
+    button.addEventListener('click', ()=>{
+        otherCalculator += button.value
+        clearDisplay()
+        updateDisplay()
+    })
+})
+
+
+keyboardNumber.forEach(button => {
+    button.addEventListener('click', ()=>{
+        calculator += button.value
+        otherCalculator += button.value
+        updateDisplay()
+    })
+});
+
+eraseDisplay.addEventListener('click', ()=>{
+    otherCalculator = ''
+    clearDisplay()
+    updateDisplay()
+});
+
+keyboardErase.addEventListener('click', ()=>{
+    calculator = calculator.slice(0, -1)
+    updateDisplay()
+});
+
+
+equal.addEventListener('click', ()=>{
+    otherCalculator = eval(otherCalculator)
+    calculator = otherCalculator
+    updateDisplay()
+})

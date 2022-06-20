@@ -20,97 +20,42 @@
             <div class="calculator" id="calculator">
                 <div class="screen">
                     <div class="screen__content">
-                        <span class="screen__elements screen__elements--text" id="screen">12345</span>
-                        <span class="screen__elements screen__elements--record">1234</span>
+                        <span class="screen__elements screen__elements--text" id="screen"></span>
+                        <span class="screen__elements screen__elements--record" id="record"></span>
                     </div>
             </div>
                 <div class="keyboard-container">
-                    <!-- special buttons are buttons that are represented with images instead of plain text -->
-                    <button class="keyboard-button keyboard-button--ac">AC</button>
-                    <button class="keyboard-button keyboard-button--erase">
+                    <button class="keyboard-button keyboard-button--ac" id="ac">AC</button>
+                    <button class="keyboard-button" id="erase">
                         <img src="./assets/icons/erase-symbol.png" alt="" class="keyboard-button__spc-img keyboard-button__spc-img--erase">
                     </button>
-                    <button class="keyboard-button">
+                    <button value=" % " class="keyboard-button keyboard-button--operand">
                         <img src="assets/icons/percentage-symbol.svg" alt="" class="keyboard-button__spc-img">
                     </button>
-                    <button class="keyboard-button">
+                    <button value=" / " class="keyboard-button keyboard-button--operand">
                         <img src="assets/icons/division-symbol.svg" alt="" class="keyboard-button__spc-img keyboard-button__spc-img--division">
                     </button>
-                    <button class="keyboard-button">7</button>
-                    <button class="keyboard-button">8</button>
-                    <button class="keyboard-button">9</button>
-                    <button class="keyboard-button">
+                    <button value="7" class="keyboard-button keyboard-button--number">7</button>
+                    <button value="8" class="keyboard-button keyboard-button--number">8</button>
+                    <button value="9" class="keyboard-button keyboard-button--number">9</button>
+                    <button value=" * " class="keyboard-button keyboard-button--operand">
                         <img src="assets/icons/multiplication-symbol.svg" class="keyboard-button__spc-img" alt="">
                     </button>
-                    <button class="keyboard-button">4</button>
-                    <button class="keyboard-button">5</button>
-                    <button class="keyboard-button">6</button>
-                    <button class="keyboard-button">
+                    <button value="4"  class="keyboard-button keyboard-button--number">4</button>
+                    <button value="5" class="keyboard-button keyboard-button--number">5</button>
+                    <button value="6" class="keyboard-button keyboard-button--number">6</button>
+                    <button value=" - " class="keyboard-button keyboard-button--operand">
                         <img src="assets/icons/minus-symbol.svg" alt="" class="keyboard-button__spc-img keyboard-button__spc-img--minus">
                     </button>
-                    <button class="keyboard-button keyboard-button--one">1</button>
-                    <button class="keyboard-button keyboard-button--two">2</button>
-                    <button class="keyboard-button keyboard-button--three">3</button>
-                    <button class="keyboard-button keyboard-button--plus">
+                    <button value="1" class="keyboard-button keyboard-button--number">1</button>
+                    <button value="2" class="keyboard-button keyboard-button--number">2</button>
+                    <button value="3" class="keyboard-button keyboard-button--number">3</button>
+                    <button value=" + " class="keyboard-button keyboard-button--operand">
                         <img src="assets/icons/plus-symbol.svg" alt="" class="keyboard-button__spc-img">
                     </button>
-                    <button class="keyboard-button keyboard-button--zero">0</button>
-                    <button class="keyboard-button keyboard-button--dot">.</button>
-                    <button class="keyboard-button keyboard-button--equal">=</button>
-                    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    <!-- <button class="keyboard__button keyboard__button--AC" id="AC">AC</button>
-                    <button class="keyboard__button keyboard__button--delete" id="delete">
-                        <img src="assets/icons/icons8-clear-symbol-50.png" alt="" class="special-btn special-btn--delete"></button>
-                    <button class="keyboard__button  keyboard__button--per" id="per">%</button>
-                    <button class="keyboard__button  keyboard__button--bet" id="bet">
-                        <img src="assets/icons/math-division.svg" alt="" class="special-btn special-btn--division"></button>
-                    <button class="keyboard__button  keyboard__button--7" id="7">7</button>
-                    <button class="keyboard__button  keyboard__button--8" id="8">8</button>
-                    <button class="keyboard__button  keyboard__button--9" id="9">9</button>
-                    <button class="keyboard__button  keyboard__button--for" id="for">
-                            <img src="assets/icons/multiplication-sign-svgrepo-com.svg" alt="multiplication-sign" class="special-btn special-btn--multiplication">
-                    </button>
-                    <button class="keyboard__button  keyboard__button--4" id="4">4</button>
-                    <button class="keyboard__button  keyboard__button--5" id="5">5</button>
-                    <button class="keyboard__button  keyboard__button--6" id="6">6</button>
-                    <button class="keyboard__button  keyboard__button--minus" id="minus">
-                        <img src="assets/icons/minus-3108.svg" alt="" class="special-btn special-btn--minus">
-                    </button>
-                    <button class="keyboard__button keyboard__button--1" id="1">1</button>
-                    <button class="keyboard__button  keyboard__button--2" id="2">2</button>
-                    <button class="keyboard__button  keyboard__button--3" id="3">3</button>
-                    <button class="keyboard__button  keyboard__button--plus" id="plus">
-                        <img src="assets/icons/plus.svg" alt="" class="special-btn special-btn--plus">
-                    </button>
-                    <button class="keyboard__button  keyboard__button--0" id="0">0</button>
-                    <button class="keyboard__button  keyboard__button--dot" id="dot">.</button>
-                    <button class="keyboard__button  keyboard__button--equal" id="equal">=</button> -->
+                    <button value="0" class="keyboard-button keyboard-button--number">0</button>
+                    <button value="." class="keyboard-button keyboard-button--number">.</button>
+                    <button class="keyboard-button keyboard-button--equal" id="equal">=</button>
             </div>
         </div>
     </main>
