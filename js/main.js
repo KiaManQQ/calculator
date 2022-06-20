@@ -27,15 +27,13 @@ const keyboardNumber = document.querySelectorAll('.keyboard-button--number');
 const keyboardSign = document.querySelectorAll('.keyboard-button--operand');
 let calculator = ''
 let otherCalculator=''
-
-
 function updateDisplay(){
     display.textContent=calculator
     displayRecord.textContent= otherCalculator
 };
 function clearDisplay(){
     calculator = ''
-}
+};
 
 keyboardSign.forEach(button =>{
     button.addEventListener('click', ()=>{
@@ -43,9 +41,7 @@ keyboardSign.forEach(button =>{
         clearDisplay()
         updateDisplay()
     })
-})
-
-
+});
 keyboardNumber.forEach(button => {
     button.addEventListener('click', ()=>{
         calculator += button.value
@@ -53,21 +49,18 @@ keyboardNumber.forEach(button => {
         updateDisplay()
     })
 });
-
 eraseDisplay.addEventListener('click', ()=>{
     otherCalculator = ''
     clearDisplay()
     updateDisplay()
 });
-
 keyboardErase.addEventListener('click', ()=>{
+    otherCalculator = otherCalculator.slice(0, -1)
     calculator = calculator.slice(0, -1)
     updateDisplay()
 });
-
-
 equal.addEventListener('click', ()=>{
     otherCalculator = eval(otherCalculator)
     calculator = otherCalculator
     updateDisplay()
-})
+});
